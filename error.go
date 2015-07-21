@@ -140,7 +140,9 @@ func Wrap(e interface{}, skip int) *Error {
 		stack:  s[:length],
 		frames: f,
 		//	StackTrace: string(stack(f)),
-		Stack: errorStack(typeName(err), err, stack(f)),
+		Stack:       errorStack(typeName(err), err, stack(f)),
+		Description: err.Error(),
+		Title:       err.Error(),
 	}
 }
 
