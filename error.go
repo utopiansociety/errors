@@ -59,7 +59,7 @@ var MaxStackDepth = 50
 // Error is an error with an attached stacktrace. It can be used
 // wherever the builtin error interface is expected.
 type Error struct {
-	Err         error  `json:"error"`
+	Err         error  `json:"-"`
 	Stack       string `json:"stack"`
 	Description string `json:"description"`
 	Title       string `json:"title"`
